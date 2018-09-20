@@ -1,8 +1,9 @@
 {
-  "name": "sort.js",
+  "name": "@xiaofei.wang/sort.js",
   "version": "1.0.0",
   "description": "排序工具库",
   "main": "lib/index.js",
+  "repository": "https://github.com/wangxiaofeid/sort.js.git",
   "scripts": {
     "lint": "tslint -t codeFrame 'src/**/*.ts'",
     "prebuild": "rm -rf lib",
