@@ -1,13 +1,17 @@
 /* 插入排序 */
-export default function insertion(arr: Array<any>) {
+import { compare } from './tools';
+
+export default function insertion(arr: Array<any>, key?: string) {
+  const compareFun = compare(key);
+
   for (let i = 1; i < arr.length; i++) {
-    let key = arr[i];
+    let item = arr[i];
     let j = i - 1;
-    while (arr[j] > key) {
+    while (arr[j] !== undefined && compareFun(arr[j], item)) {
       arr[j + 1] = arr[j];
       j--;
     }
-    arr[j + 1] = key;
+    arr[j + 1] = item;
   }
   return arr;
 }

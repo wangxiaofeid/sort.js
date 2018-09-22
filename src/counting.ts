@@ -5,13 +5,14 @@ export default function counting(arr: Array<any>) {
     C: Array<any> = [],
     min = arr[0],
     max = arr[0];
+
   for (let i = 0; i < len; i++) {
-    min = min <= arr[i] ? min : arr[i];
-    max = max >= arr[i] ? max : arr[i];
+    min = min > arr[i] ? arr[i] : min;
+    max = arr[i] > max ? arr[i] : max;
     C[arr[i]] = C[arr[i]] ? C[arr[i]] + 1 : 1;
   }
 
-  for (let j = min; j < max; j++) {
+  for (let j = min; max > j; j++) {
     C[j + 1] = (C[j + 1] || 0) + (C[j] || 0);
   }
   for (let k = len - 1; k >= 0; k--) {
@@ -19,5 +20,4 @@ export default function counting(arr: Array<any>) {
     C[arr[k]]--;
   }
   return B;
-
 }

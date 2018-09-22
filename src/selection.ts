@@ -1,11 +1,15 @@
 /* 选择排序 */
-export default function selection(arr: Array<any>) {
-  let len = arr.length;
-  let minIndex, temp;
+import { compare } from './tools';
+
+export default function selection(arr: Array<any>, key?: string) {
+  let len = arr.length,
+      minIndex, 
+      temp;
+  const compareFun = compare(key);
   for (let i = 0; i < len - 1; i++) {
     minIndex = i;
     for (let j = i + 1; j < len; j++) {
-      if (arr[j] < arr[minIndex]) {
+      if (compareFun(arr[minIndex], arr[j])) {
         minIndex = j;
       }
     }

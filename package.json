@@ -13,6 +13,7 @@
   "author": "xiaofei.wang",
   "license": "MIT",
   "devDependencies": {
+    "lodash": "^4.17.11",
     "tslint": "^5.9.1",
     "typescript": "^2.7.2"
   }
