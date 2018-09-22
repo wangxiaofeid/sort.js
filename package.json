@@ -1,6 +1,6 @@
 {
   "name": "@xiaofei.wang/sort.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "排序工具库",
   "main": "lib/index.js",
   "repository": "https://github.com/wangxiaofeid/sort.js.git",
